@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" xmlns:x-bind="http://www.w3.org/1999/xhtml" xmlns:x-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>MoonSpace</title>
+</head>
+<body class="w-full">
+<section>
+    <div class="h-auto w-full">
+        <!-- NAVBAR -->
+        <nav class="font-inter container mx-auto h-auto w-full lg:relative lg:top-0" x-data="{isOpen: false, menuOne:false}">
+            <!-- CONTAINER -->
+            <div class="flex flex-col px-6 py-6 lg:flex-row lg:items-center lg:justify-between lg:px-10 lg:py-4 xl:px-20">
+                <!-- SVG LOGO - YOU CAN REPLACE THIS -->
+                <h1 class="font-bold">
+                    <a href="/" aria-current="page"
+                       class="relative float-left bg-[#00000000] leading-[0] text-[#333333] no-underline hover:outline-0 max-[991px]:mr-auto max-[767px]:pl-0"
+                       aria-label="home">
+                        MoonSpace
+                    </a>
+                </h1>
+                <!-- MENU CONTENT 1 -->
+                <div class="mt-14 flex flex-col space-y-8 lg:mt-0 lg:flex lg:flex-row lg:space-x-1 lg:space-y-0" x-bind:class="isOpen ? 'show' : 'hidden'">
+                    <a href="/auth/user" class="font-inter rounded-lg lg:px-6 lg:py-4 lg:hover:bg-gray-50 lg:hover:text-gray-800">User</a>
+                    <a href="/blog" class="font-inter rounded-lg lg:px-6 lg:py-4 lg:hover:bg-gray-50 lg:hover:text-gray-800">Blog</a>
+                </div>
+                <!-- MENU CONTENT 2 -->
+                <!-- BURGER MENU -->
+                <a href="#" class="absolute right-5 lg:hidden" x-on:click.prevent="isOpen = !isOpen">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.75 12H20.25" stroke="#160042" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M3.75 6H20.25" stroke="#160042" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M3.75 18H20.25" stroke="#160042" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </div>
+</section>
+<section class="bg-[#f2f2f7] container mx-auto">
+    <!-- Container -->
+    <div class="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
+        <!-- Component -->
+        <div class="flex flex-col-reverse justify-start gap-8 sm:gap-20 lg:flex-row">
+            <img src="https://assets.website-files.com/6357722e2a5f19121d37f84d/635b53eeec84c014ec421d16_Group%20183.png" alt="" class="inline-block max-w-xl" />
+            <div class="flex flex-col items-start lg:justify-center">
+                <img src="https://assets.website-files.com/6357722e2a5f19121d37f84d/6358ca7f4a2963633083434e_PayPal%20Logo-2.svg" alt="" class="mb-4 inline-block" />
+                <p class="mb-6 max-w-md text-[#636262] md:mb-12"> Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, “Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim.
+                    <br />
+                    <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim.”
+                </p>
+                <p class="font-bold">John Robert</p>
+                <p class="text-sm text-[#647084]">Senior Webflow Developer</p>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
